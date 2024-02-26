@@ -1,0 +1,29 @@
+meta {
+  name: Users list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/v1/users
+  body: none
+  auth: bearer
+}
+
+query {
+  ~q: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+docs {
+  Retrieve the list of all users of the ODK Central instance (who can connect to the instance web interface).
+  
+  Optionally, a q querystring parameter may be provided to filter the returned users by any given string. The search is performed via a trigram similarity index over both the Email and Display Name fields, and results are ordered by match score, best matches first
+  
+  
+  
+  
+}

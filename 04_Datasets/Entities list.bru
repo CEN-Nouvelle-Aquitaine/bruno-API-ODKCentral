@@ -1,0 +1,24 @@
+meta {
+  name: Entities list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/v1/projects/{{projectid}}/datasets/{{datasetname}}.svc/Entities
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 
+  datasetname: 
+}
+
+docs {
+  Listing all entities of the specified dataset using the OData Dataset Service.
+}

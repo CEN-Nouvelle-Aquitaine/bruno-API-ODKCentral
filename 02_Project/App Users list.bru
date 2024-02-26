@@ -1,0 +1,23 @@
+meta {
+  name: App Users list
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/v1/projects/{{projectid}}/app-users
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 
+}
+
+docs {
+  Retrieve the list of all app-users of the project including id, displayName and authentification token
+}

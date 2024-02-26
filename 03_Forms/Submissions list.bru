@@ -1,0 +1,32 @@
+meta {
+  name: Submissions list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/v1/projects/{{projectid}}/forms/{{xmlformid}}/submissions
+  body: none
+  auth: bearer
+}
+
+headers {
+  X-Extended-Metadata: true
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 
+  xmlformid: 
+}
+
+docs {
+  Listing all submissions linked to the specified form through his xmlformid.
+  
+  The activated X-Extended-Metadata header returns a submitter data object.
+  
+  
+}

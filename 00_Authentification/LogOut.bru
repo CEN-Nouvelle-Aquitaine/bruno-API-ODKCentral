@@ -1,0 +1,19 @@
+meta {
+  name: LogOut
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{base_url}}/v1/sessions/{{token}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+docs {
+  Deleting the current authentication token
+}

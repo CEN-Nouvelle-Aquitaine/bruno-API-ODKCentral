@@ -1,0 +1,29 @@
+meta {
+  name: Foms list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/v1/projects/{{projectid}}/forms
+  body: none
+  auth: bearer
+}
+
+headers {
+  X-Extended-Metadata: true
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 
+}
+
+docs {
+  Listing all forms linked to the project.
+  
+  With the activated X-Extended-Metadata header, a complete report of submissions and their review state is added.
+}
