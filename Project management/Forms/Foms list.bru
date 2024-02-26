@@ -1,0 +1,19 @@
+meta {
+  name: Foms list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/v1/projects/{{projectid}}/forms
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 3
+}

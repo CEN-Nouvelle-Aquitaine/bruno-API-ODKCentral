@@ -1,0 +1,20 @@
+meta {
+  name: Submissions list
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/v1/projects/{{projectid}}/forms/{{xmlformid}}/submissions
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 3
+  xmlformid: steli1
+}

@@ -1,0 +1,20 @@
+meta {
+  name: App Users delete
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{base_url}}/v1/projects/{{projectid}}/app-users/{{appuserid}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 2
+  appuserid: 316
+}
