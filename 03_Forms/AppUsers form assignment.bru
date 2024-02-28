@@ -1,0 +1,30 @@
+meta {
+  name: AppUsers form assignment
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/v1/projects/{{projectid}}/forms/{{xmlformid}}/assignments/app-user/{{appuserid}}
+  body: none
+  auth: bearer
+}
+
+headers {
+  X-Extended-Metadata: true
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 
+  xmlformid: 
+  appuserid: 
+}
+
+docs {
+  Allow an app-user (appuserid) to access a form (xlsformid) in ODK Collect (depends on form status).
+  
+}
