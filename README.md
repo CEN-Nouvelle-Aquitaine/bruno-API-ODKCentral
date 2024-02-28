@@ -11,7 +11,7 @@ This repository is a Bruno collection allowing you to interact directly with the
 
 1- Clone localy this repository
 
-2- [Dowload Bruno](https://www.usebruno.com/downloads) and install it on your computer
+2- [Download Bruno](https://www.usebruno.com/downloads) and install it on your computer
 
 3- Open the collection in Bruno by searching for the cloned folder
 
