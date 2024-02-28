@@ -1,0 +1,46 @@
+meta {
+  name: Adding entity
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/v1/projects/{{projectid}}/datasets/{{datasetname}}/entities
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "uuid" : "{{entity_uuid}}",
+    "label": "{{entity_label}}",
+    "data": {
+      "{{entity_data1_label}}" : "{{entity_data1}}",
+      "{{entity_data2_label}}" : "{{entity_data2}}",
+      "{{entity_data3_label}}" : "{{entity_data3}}" 
+    }
+  }
+}
+
+vars:pre-request {
+  projectid: 
+  datasetname: 
+  entity_uuid: 
+  entity_label: 
+  entity_data1_label: 
+  entity_data1: 
+  entity_data2_label: 
+  entity_data2: 
+  entity_data3_label: 
+  entity_data3: 
+}
+
+docs {
+  Adding an entity into the specified dataset (datasetname).
+  
+  Request body takes the JSON representation of the entity. It should have uuid and label property in addition to the user-defined properties of the Dataset in data property.
+}
