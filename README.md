@@ -5,7 +5,9 @@
 **ODK** is a powerful open source software that makes field data collection easy.
 **ODK Central** is the server that manages all data related to field collection trough the mobil app ODK Collect. --> https://github.com/getodk/central
 
-This repository is a Bruno collection allowing you to interact directly with the API of an ODK Central instance
+This repository is a Bruno collection allowing you to interact directly with the API of an ODK Central instance.
+
+This Bruno collection has been tested and is compatible with the [ODK Central v2023.5.1 version](https://github.com/getodk/central/releases) published on 2024/01/29.
 
 ## How it works?
 
@@ -17,4 +19,5 @@ This repository is a Bruno collection allowing you to interact directly with the
 
 4- Load and congigure the *ODK Central* environment with your ODK Central instance url, admin user and admin password.
 
-5- Enjoy 
+5- Enjoy
+
