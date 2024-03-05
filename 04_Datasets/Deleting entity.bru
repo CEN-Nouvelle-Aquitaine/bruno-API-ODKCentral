@@ -1,0 +1,25 @@
+meta {
+  name: Deleting entity
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{base_url}}/v1/projects/{{projectid}}/datasets/{{datasetname}}/entities/{{entity_uuid}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 
+  datasetname: 
+  entity_uuid: 
+}
+
+docs {
+  Deleting an entity based on its uuid and the id of the project in which it was created
+}
