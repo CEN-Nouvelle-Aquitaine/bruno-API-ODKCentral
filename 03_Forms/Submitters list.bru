@@ -1,0 +1,24 @@
+meta {
+  name: Submitters list
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/v1/projects/{{projectid}}/forms/{{xmlformid}}/submissions/submitters
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 
+  xmlformid: 
+}
+
+docs {
+  Retrieve a list of all known submitting actors to the given form (xmlformid) in the specified project (projectid). Each actor that has submitted to the given Form will be returned once.
+}
