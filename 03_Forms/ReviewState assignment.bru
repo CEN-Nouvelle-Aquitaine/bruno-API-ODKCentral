@@ -1,0 +1,36 @@
+meta {
+  name: ReviewState assignment
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{base_url}}/v1/projects/{{projectid}}/forms/{{xmlformid}}/submissions/{{instanceid}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+  "reviewState" : "{{reviewstate}}"
+  }
+}
+
+vars:pre-request {
+  projectid: 
+  xmlformid: 
+  instanceid: 
+  reviewstate: 
+}
+
+docs {
+  Changes the assignment reviewstate of a form based on the form instanceid.
+  To approve a submission, the reviewstate is "approved".
+  To specify issues in a submission, the reviewstate is "hasIssues".
+  
+  
+}
