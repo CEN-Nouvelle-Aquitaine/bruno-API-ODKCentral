@@ -17,7 +17,7 @@ This Bruno collection has been tested and is compatible with the [ODK Central v2
 
 3- Open the collection in Bruno by searching for the cloned folder
 
-4- Load and congigure the *ODK Central* environment with your ODK Central instance url, admin user and admin password.
+4- Load and configure the *ODK Central* environment with your ODK Central instance url, admin user and admin password.
 
 5- Enjoy
 
