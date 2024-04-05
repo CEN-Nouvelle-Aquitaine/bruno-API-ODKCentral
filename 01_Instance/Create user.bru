@@ -1,0 +1,29 @@
+meta {
+  name: Create user
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/v1/users
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "email": "{{email}}"
+  }
+}
+
+vars:pre-request {
+  email: 
+}
+
+docs {
+  Create a new ODK Central user and send him a registration email
+}
