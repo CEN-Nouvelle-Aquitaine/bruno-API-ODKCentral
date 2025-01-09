@@ -1,0 +1,25 @@
+meta {
+  name: Public links list
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/v1/projects/{{projectid}}/forms/{{xmlformid}}/public-links
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 
+  xmlformid: 
+}
+
+docs {
+  Retrieve a list of all every Public Access Link linked to the specified form (xmlformid) in the specified project (projectid).
+  
+}
