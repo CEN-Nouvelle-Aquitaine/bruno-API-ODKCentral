@@ -1,0 +1,31 @@
+meta {
+  name: Add an Appuser
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base_url}}/v1/projects/{{projectid}}/app-users
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "displayName": "{{appusername}}"
+  }
+}
+
+vars:pre-request {
+  projectid: 
+  appusername: 
+}
+
+docs {
+  Create an appuser (appusername) linked to a project (projectid)
+  
+}
