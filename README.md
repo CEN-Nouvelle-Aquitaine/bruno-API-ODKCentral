@@ -1,5 +1,7 @@
 # bruno-API-ODKCentral
 
+## /!\ Following his departure from this organization, the main contributor maintains the project in [this fork](https://github.com/tomgachet/bruno-API-ODKCentral), still freely accessible. 
+
 **Bruno** is an open source offline API client that makes it easy to interact with API through Bruno API collections. --> https://github.com/usebruno/bruno
 
 **ODK** is a powerful open source software that makes field data collection easy.
